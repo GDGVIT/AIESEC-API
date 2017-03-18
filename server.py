@@ -1,19 +1,3 @@
-#Tornado Libraries
-from tornado.ioloop import IOLoop
-from tornado.escape import json_encode
-from tornado.web import RequestHandler, Application, asynchronous
-from tornado.httpserver import HTTPServer
-from tornado.httpclient import AsyncHTTPClient
-from tornado.gen import engine, Task
-from tornado.options import define, options
-
-import jwt
-from motor import MotorClient
-import json
-import requests
-import os, uuid, sys
-from passlib.hash import sha256_crypt as scrypt
-
 define("port",
   default = 8000,
   help = "Contact the One who made it Contact PIYUSH :P",
