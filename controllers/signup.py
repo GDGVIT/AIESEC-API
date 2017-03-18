@@ -8,7 +8,7 @@ class SignupHandler(RequestHandler):
 
 	def post(file, email, pswd, name, ctNo, raisedby, cpf1, cpf2, cpf3):
 
-		if db.users.find_one(email):
+		if db.mails.find_one(email):
 
 			password = hashingPassword(pswd)
 			password = hashlib.sha256(password).hexdigest()
@@ -20,13 +20,14 @@ class SignupHandler(RequestHandler):
 				"contact" : ctNo,
 				"raisedBy" : raisedby,
 				"country_pref" : [cpf1, cpf2, cpf3],
-				"status" : "raised"
+				"status" : "raised",
+				"files" : []
 				})
 
 			token = jwt.encode({"email" : email}, secret, algorithm = 'HS256')
+			db.token.insert({"token" : token, "name" : ret["name"], "email" : email})
 
 			return {"token" : token, "code" : 200, "status" : "successfull"}
 
 		else:
-
 			return {"code" : 401, "status" : "not_given_access"}
