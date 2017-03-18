@@ -8,7 +8,7 @@ class LoginHandler(RequestHandler):
 
 	def post(email, pswd):
 
-		password = hashingPassword(pswd)
+		password = hashnigrPassword(pswd)
 		password = hashlib.sha256(password).hexdigest()
 
 		ret = yield db.users.find_one({"email" : email, "pswd" = password})
@@ -16,6 +16,7 @@ class LoginHandler(RequestHandler):
 		if bool(ret):
 
 			token = jwt.encode({"email" : email}, secret, algorithm = 'HS256')
+			db.token.insert({{"token" : token, "name" : ret["name"]}})
 
 			return {"token" : token, "code" : 200, "status" : "successfull"}
 
