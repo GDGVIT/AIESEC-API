@@ -3,7 +3,7 @@ from tornado.escape import json_encode
 from tornado.web import RequestHandler, Application, asynchronous
 from tornado.httpserver import HTTPServer
 from tornado.httpclient import AsyncHTTPClient
-from tornado.gen import engine, Task
+from tornado.gen import engine, Task, coroutine
 from tornado.options import define, options
 
 import jwt

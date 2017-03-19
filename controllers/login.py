@@ -4,12 +4,13 @@ secret = "bb9f8f5742f313ab5e6b3d93f96f36ab59955d86b71b4a7c"
 
 class LoginHandler(RequestHandler):
 
+	@coroutine
 	def post(email, pswd):
 
-		password = hashnigrPassword(pswd)
+		password = hashingPassword(pswd)
 		password = hashlib.sha256(password).hexdigest()
 
-		data = yield db.users.find_one({"email" : email, "pswd" = password})
+		data = yield db.users.find_one({"email" : email, "pswd" : password})
 
 		if bool(ret):
 
@@ -17,8 +18,10 @@ class LoginHandler(RequestHandler):
 			db.token.insert({"token" : token, "name" : data["name"], "email" : email})
 
 			del(data["_id"])
-			return {"token" : token, "code" : 200, "status" : "successfull", "user_data" : data}
+			yield {"token" : token, "code" : 200, "status" : "successfull", "user_data" : data}
+			return
 
 		else:
 
-			return {"code" : 400, "status" : "invalid_credentials"}
+			yield {"code" : 400, "status" : "invalid_credentials"}
+			return

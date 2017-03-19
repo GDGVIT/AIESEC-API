@@ -4,6 +4,7 @@ __UPLOADS__ = "uploads/"
 
 class UploadsHandler(RequestHandler):
 
+	@coroutine
 	def post(auth_token, files):
 
 		tk = db.token.find_one({"token" : auth_token})
@@ -16,9 +17,11 @@ class UploadsHandler(RequestHandler):
 				fh.write(fl['body'])
 				fh.close()
 				db.users.update({"email" : tk["email"]},
-					"$push" : {"files" : __UPLOADS__ + cname})
+					{"$push" : {"files" : __UPLOADS__ + cname}})
 
-			return {"code" : 202, "status" : "successfully_uploaded"}
+			yield {"code" : 202, "status" : "successfully_uploaded"}
+			return
 
 		else:
-			return {"code" : 102, "status" : "invalid_token"}
+			yield {"code" : 102, "status" : "invalid_token"}
+			return

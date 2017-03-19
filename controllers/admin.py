@@ -2,18 +2,19 @@ from modules import *
 
 class AddUserHandler(RequestHandler):
 
+    @coroutine
     def post(auth_token, admin_email, email):
 
-        chk_data = db.emails.find({"eb" : admin_email})
+        tk = db.token.find_one({"token" : auth_token})
 
-        if chk_data:
+        if tk:
+            chk_data = db.emails.find({"eb" : admin_email})
 
-            db.users.insert({"email" : emails})
+            if chk_data:
+                db.users.insert({"email" : email})
+                yield {"code" : 200, "status" : "successfull"}
+                return
 
-            return {"code" : 200, "status" : "successfull"}
-
-        else:
-            return {"code" : 300, "status" : "Not_a_admin"}
-
-
-class
+            else:
+                yield {"code" : 300, "status" : "Not_a_admin"}
+                return
