@@ -5,7 +5,7 @@ secret = "bb9f8f5742f313ab5e6b3d93f96f36ab59955d86b71b4a7c"
 class LoginHandler(RequestHandler):
 
 	@coroutine
-	def post(email, pswd):
+	def post(self, email, pswd):
 
 		password = hashingPassword(pswd)
 		password = hashlib.sha256(password).hexdigest()

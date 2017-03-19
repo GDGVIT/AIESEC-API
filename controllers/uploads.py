@@ -5,7 +5,7 @@ __UPLOADS__ = "uploads/"
 class UploadsHandler(RequestHandler):
 
 	@coroutine
-	def post(auth_token, files):
+	def post(self, auth_token, files):
 
 		tk = db.token.find_one({"token" : auth_token})
 

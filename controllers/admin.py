@@ -3,7 +3,7 @@ from modules import *
 class AddUserHandler(RequestHandler):
 
     @coroutine
-    def post(auth_token, admin_email, email):
+    def post(self, auth_token, admin_email, email):
 
         tk = db.token.find_one({"token" : auth_token})
 

@@ -5,7 +5,7 @@ secret = "bb9f8f5742f313ab5e6b3d93f96f36ab59955d86b71b4a7c"
 class SignupHandler(RequestHandler):
 
 	@coroutine
-	def post(file, email, pswd, name, ctNo, raisedby, cpf1, cpf2, cpf3):
+	def post(self, file, email, pswd, name, ctNo, raisedby, cpf1, cpf2, cpf3):
 
 		if db.users.find_one({"email" : email}):
 
