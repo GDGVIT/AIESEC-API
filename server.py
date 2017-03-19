@@ -7,7 +7,7 @@ define("port",
   type = int)
 
 #overloading the Application
-class Application(Application):
+class ApplicationHandler(Application):
 
 	def __init__(self):
 
@@ -17,6 +17,6 @@ class Application(Application):
 
 if __name__ == '__main__':
     options.parse_command_line()
-    http_server = HTTPServer(Application())
+    http_server = HTTPServer(ApplicationHandler())
     http_server.listen(options.port)
     IOLoop.instance().start()
