@@ -7,6 +7,9 @@ class UploadsHandler(RequestHandler):
 	@coroutine
 	def post(self, auth_token, files):
 
+		auth_token = self.get_argument("auth_token")
+		files = self.get_argument("files")
+
 		tk = db.token.find_one({"token" : auth_token})
 
 		if tk:
@@ -19,9 +22,7 @@ class UploadsHandler(RequestHandler):
 				db.users.update({"email" : tk["email"]},
 					{"$push" : {"files" : __UPLOADS__ + cname}})
 
-			yield {"code" : 202, "status" : "successfully_uploaded"}
-			return
+			self.write({"code" : 202, "status" : "successfully_uploaded"})
 
 		else:
-			yield {"code" : 102, "status" : "invalid_token"}
-			return
+			self.write({"code" : 102, "status" : "invalid_token"})

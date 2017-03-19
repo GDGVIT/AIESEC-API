@@ -5,6 +5,9 @@ class AddUserHandler(RequestHandler):
     @coroutine
     def post(self, auth_token, admin_email, email):
 
+        auth_token = self.get_argument("auth_token")
+        admin_email = self.get_argument("admin_email")
+        email = self.get_argument("email")
         tk = db.token.find_one({"token" : auth_token})
 
         if tk:
