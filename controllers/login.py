@@ -16,9 +16,12 @@ class LoginHandler(RequestHandler):
 
 		data = yield db.users.find_one({"email" : email, "pswd" : password})
 
-		if bool(ret):
+		if bool(data):
 
-			token = jwt.encode({"email" : email}, secret, algorithm = 'HS256')
+			now = datetime.now()
+			time = now.strftime("%d-%m-%Y %I:%M %p")
+
+			token = jwt.encode({"email" : email, "time" : time}, secret, algorithm = 'HS256')
 			db.token.insert({"token" : token, "name" : data["name"], "email" : email})
 
 			del(data["_id"])

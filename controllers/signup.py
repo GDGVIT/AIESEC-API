@@ -32,7 +32,10 @@ class SignupHandler(RequestHandler):
 				"files" : []
 				}})
 
-			token = jwt.encode({"email" : email}, secret, algorithm = 'HS256')
+			now = datetime.now()
+			time = now.strftime("%d-%m-%Y %I:%M %p")
+
+			token = jwt.encode({"email" : email, "time" : time}, secret, algorithm = 'HS256')
 			db.token.insert({"token" : token, "name" : name, "email" : email})
 
 			self.write({"token" : token, "code" : 200, "status" : "successfull"})
