@@ -1,5 +1,4 @@
-def hashingPassword(password):
-    salt = [password[i] for i in range(0, len(password), 2)]
-    postsalt = ''.join(salt[:len(salt) / 2])
-    presalt = ''.join(salt[len(salt) / 2:])
-    return (presalt + password + postsalt)
+from modules import *
+def hashingPassword(password, salt = uuid.uuid4().hex):
+    np = salt + password
+    return pbkdf2_sha256.hash(np), salt

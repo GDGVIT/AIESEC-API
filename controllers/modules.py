@@ -10,7 +10,7 @@ import json
 import requests
 import os, uuid, sys
 from motor import MotorClient
-import hashlib
+from passlib.hash import pbkdf2_sha256
 from datetime import datetime
 
 secret = "bb9f8f5742f313ab5e6b3d93f96f36ab59955d86b71b4a7c"

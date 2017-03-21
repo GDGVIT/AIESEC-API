@@ -11,22 +11,25 @@ class LoginHandler(RequestHandler):
 		email = self.get_argument("email")
 		pswd = self.get_argument("pswd")
 
-		password = hashingPassword(pswd)
-		password = hashlib.sha256(pswd).hexdigest()
+		data = yield db.users.find_one({"email" : email})
 
-		data = yield db.users.find_one({"email" : email, "pswd" : password})
+		if data:
 
-		if bool(data):
+			if pbkdf2_sha256.verify(data["salt"] + pswd, data["pswd"]):
+				now = datetime.now()
+				time = now.strftime("%d-%m-%Y %I:%M %p")
 
-			now = datetime.now()
-			time = now.strftime("%d-%m-%Y %I:%M %p")
+				token = jwt.encode({"email" : email, "time" : time}, secret, algorithm = 'HS256')
+				db.token.insert({"token" : token, "name" : data["name"], "email" : email})
 
-			token = jwt.encode({"email" : email, "time" : time}, secret, algorithm = 'HS256')
-			db.token.insert({"token" : token, "name" : data["name"], "email" : email})
+				del(data["_id"])
+				del(data["pswd"])
+				del(data["salt"])
+				self.write({"token" : token, "code" : 200, "status" : "successfull", "user_data" : data})
 
-			del(data["_id"])
-			self.write({"token" : token, "code" : 200, "status" : "successfull", "user_data" : data})
+			else:
+				self.write({"code" : 400, "status" : "invalid_password"})
 
 		else:
 
-			self.write({"code" : 400, "status" : "invalid_credentials"})
+			self.write({"code" : 400, "status" : "invalid_email"})

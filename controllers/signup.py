@@ -19,8 +19,7 @@ class SignupHandler(RequestHandler):
 
 		if db.users.find_one({"email" : email}):
 
-			password = hashingPassword(pswd)
-			password = hashlib.sha256(password).hexdigest()
+			password, salt = hashingPassword(pswd)
 
 			ret = yield db.users.update({"email" : email},{"$set" : {
 				"name" : name,
@@ -29,16 +28,18 @@ class SignupHandler(RequestHandler):
 				"raisedBy" : raisedby,
 				"country_pref" : [cpf1, cpf2, cpf3],
 				"status" : "raised",
-				"files" : []
+				"files" : [],
+				"salt" : salt
 				}})
 
 			now = datetime.now()
 			time = now.strftime("%d-%m-%Y %I:%M %p")
 
-			token = jwt.encode({"email" : email, "time" : time}, secret, algorithm = 'HS256')
+			token = jwt.encode({"email" : email, "time" : time},
+								secret, algorithm = 'HS256')
 			db.token.insert({"token" : token, "name" : name, "email" : email})
 
-			self.write({"token" : token, "code" : 200, "status" : "successfull"})
+			self.write({"token" : token, "code" : 200, "status" : "successfull", "user_data" : data})
 
 		else:
 			self.write({"code" : 401, "status" : "not_given_access"})
