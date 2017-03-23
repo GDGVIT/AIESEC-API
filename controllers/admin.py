@@ -15,12 +15,12 @@ class AddUserHandler(RequestHandler):
 
             if chk_data:
 
-                if not db.users.find({"email" : email}):
-                    db.users.insert({"email" : email})
-                    self.write({"code" : 200, "status" : "successfull"})
+                if db.users.find({"email" : email}):
+                    self.write({"code" : 405, "status" : "already _a_member"})
 
                 else:
-                    self.write({"code" : 405, "status" : "already _a_member"})
+                    db.users.insert({"email" : email})
+                    self.write({"code" : 200, "status" : "successfull"})
 
             else:
                 self.write({"code" : 300, "status" : "Not_a_admin"})
