@@ -3,7 +3,7 @@ from modules import *
 class AddUserHandler(RequestHandler):
 
     @coroutine
-    def post(self, auth_token, admin_email, email):
+    def post(self):
 
         auth_token = self.get_argument("auth_token")
         admin_email = self.get_argument("admin_email")
