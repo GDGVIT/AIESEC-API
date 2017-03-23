@@ -11,7 +11,7 @@ class AddUserHandler(RequestHandler):
         tk = yield db.token.find_one({"token" : auth_token})
 
         if tk:
-            chk_data = yield db.bodies.find_one({"eb" : admin_email})
+            chk_data = yield db.bodies.find_one({"body" : "eb", "email": admin_email})
 
             if chk_data and (admin_email == tk["email"]):
 
