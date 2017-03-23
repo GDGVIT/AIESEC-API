@@ -14,11 +14,16 @@ class AddUserHandler(RequestHandler):
             chk_data = db.bodies.find({"eb" : admin_email})
 
             if chk_data:
-                db.users.insert({"email" : email})
-                return {"code" : 200, "status" : "successfull"}
+
+                if not db.users.find({"email" : email}):
+                    db.users.insert({"email" : email})
+                    self.write({"code" : 200, "status" : "successfull"})
+
+                else:
+                    self.write({"code" : 405, "status" : "already _a_member"})
 
             else:
-                return {"code" : 300, "status" : "Not_a_admin"}
+                self.write({"code" : 300, "status" : "Not_a_admin"})
 
         else:
-            return {"code" : 300, "status" : "Invalid_token"}
+            self.wirte({"code" : 300, "status" : "Invalid_token"})
