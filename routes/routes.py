@@ -16,5 +16,9 @@ routes = [
     (
         r"/logout",
         logout.LogoutHandler
+    ),
+    (
+        r"/admin/addUser"
+        admin.AddUserHandler
     )
 ]
