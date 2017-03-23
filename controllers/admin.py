@@ -15,9 +15,7 @@ class AddUserHandler(RequestHandler):
 
             if chk_data:
                 db.users.insert({"email" : email})
-                yield {"code" : 200, "status" : "successfull"}
-                return
+                return {"code" : 200, "status" : "successfull"}
 
             else:
-                yield {"code" : 300, "status" : "Not_a_admin"}
-                return
+                return {"code" : 300, "status" : "Not_a_admin"}
