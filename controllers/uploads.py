@@ -10,7 +10,7 @@ class UploadsHandler(RequestHandler):
 		auth_token = self.get_argument("auth_token")
 		files = self.get_argument("files")
 
-		tk = db.token.find_one({"token" : auth_token})
+		tk = yield db.token.find_one({"token" : auth_token})
 
 		if tk:
 			for fl in files:
