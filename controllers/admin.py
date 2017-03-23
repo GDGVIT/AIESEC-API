@@ -11,7 +11,7 @@ class AddUserHandler(RequestHandler):
         tk = db.token.find_one({"token" : auth_token})
 
         if tk:
-            chk_data = db.emails.find({"eb" : admin_email})
+            chk_data = db.bodies.find({"eb" : admin_email})
 
             if chk_data:
                 db.users.insert({"email" : email})
