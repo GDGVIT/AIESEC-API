@@ -13,7 +13,7 @@ class AddUserHandler(RequestHandler):
         if tk:
             chk_data = yield db.bodies.find_one({"eb" : admin_email})
 
-            if chk_data:
+            if chk_data and (admin_email == tk["email"]):
 
                 isUser = yield db.users.find_one({"email" : email})
                 if isUser:
