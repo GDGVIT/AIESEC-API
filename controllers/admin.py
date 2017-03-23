@@ -19,3 +19,6 @@ class AddUserHandler(RequestHandler):
 
             else:
                 return {"code" : 300, "status" : "Not_a_admin"}
+
+        else:
+            return {"code" : 300, "status" : "Invalid_token"}
