@@ -1,468 +1,577 @@
-{
-	"eb": [
-		{
-			"name": "Nishant Nijaguna",
-			"email_id": "nishant.nijaguna8@aiesec.net"
-		},
-		{
-			"name": "Akash Nagarkar",
-			"email_id": "akashnagarkar@aiesec.net"
-		},
-		{
-			"name": "Avinash Dudani",
-			"email_id": "avinash2.dudani@aiesec.net"
-		},
-		{
-			"name": "Kaarthik Saravanan",
-			"email_id": "kaarthik.saravanan@aiesec.net"
-		},
-		{
-			"name": "Kendra Gandhi",
-			"email_id": "kendra.gandhi@aiesec.net"
-		},
-		{
-			"name": "Nihal Bashaher",
-			"email_id": "nihal.bashaher@aiesec.net"
-		},
-		{
-			"name": "Prithvi Kumar",
-			"email_id": "prithvi.kumar@aiesec.net"
-		},
-		{
-			"name": "Rishabh Oswal",
-			"email_id": "rishabh.oswal@aiesec.net"
-		},
-		{
-			"name": "Robin Bahl",
-			"email_id": "robin.bahl@aiesec.net"
-		}
-	],
-	"mb": [
-		{
-			"name": "Akash Jayan",
-			"email_id": "akash.jayan@aiesec.net "
-		},
-		{
-			"name": "Akshit Mathur",
-			"email_id": "akshit.mathur@aiesec.net"
-		},
-		{
-			"name": "Aniket Lunker",
-			"email_id": "Aniket.lunker@aiesec.net"
-		},
-		{
-			"name": "Anshuman Praharaj",
-			"email_id": "anshuman.praharaj@aiesec.net"
-		},
-		{
-			"name": "Archit Madaan",
-			"email_id": "Archit.madaan@aiesec.net"
-		},
-		{
-			"name": "Barkha Agarwal",
-			"email_id": "barkhaagarwal.aiesec@gmail.com"
-		},
-		{
-			"name": "Dinesh Choragudi",
-			"email_id": "dineshkumar.choragudi@aiesec.net"
-		},
-		{
-			"name": "Fidah Sultana",
-			"email_id": "fidah.sultana@aiesec.net "
-		},
-		{
-			"name": "Gautham Krishnan",
-			"email_id": "gautham.krishnan@aiesec.net"
-		},
-		{
-			"name": "Harsh Madaan",
-			"email_id": "harsh.madaan@aiesec.net"
-		},
-		{
-			"name": "Kanhiaya Sachdev",
-			"email_id": "kanhiaya.sachdev@aiesec.net"
-		},
-		{
-			"name": "Keerthi Shrikar Tatapudi",
-			"email_id": "shrikar.tatapudi@aiesec.net"
-		},
-		{
-			"name": "Lav Mahtani",
-			"email_id": "lav.mahtani@aiesec.net "
-		},
-		{
-			"name": "Madhumitha Ramachandran",
-			"email_id": "madhumitha.ramachandran@aiesec.net"
-		},
-		{
-			"name": "Nandhini Natarajan",
-			"email_id": "nandhini.natarajan@aiesec.net"
-		},
-		{
-			"name": "Niyor Sisodia",
-			"email_id": "niyor.sisodia@aiesec.net"
-		},
-		{
-			"name": "Parth Chaturvedi",
-			"email_id": "parth.chaturvedi@aiesec.net"
-		},
-		{
-			"name": "Pranav Gaur",
-			"email_id": "pranav.gaur@aiesec.net"
-		},
-		{
-			"name": "Raghav Bhan",
-			"email_id": "raghav.bhan@aiesec.net"
-		},
-		{
-			"name": "Rashi Agarwala",
-			"email_id": "rashi.agarwala@aiesec.net "
-		},
-		{
-			"name": "Ruturaj Bhagat",
-			"email_id": "ruturaj.bhagat@aiesec.net"
-		},
-		{
-			"name": "Sarthak Thapliyal",
-			"email_id": "sarthak.thapliyal@aiesec.net "
-		},
-		{
-			"name": "Tanya Jain",
-			"email_id": "tanya2.jain@aiesec.net"
-		},
-		{
-			"name": "Vaishnavi Bachala",
-			"email_id": "Vaishnavi.bachala@aiesec.net"
-		},
-		{
-			"name": "Vandan Mamlani",
-			"email_id": "vandan.mamlani@aiesec.net"
-		},
-		{
-			"name": "Yashasvi Chebiyyam",
-			"email_id": "yashasvi.chebiyyam@aiesec.net"
-		}
-	],
-	"gb": [
-		{
-			"name": "Aayush Singh",
-			"email_id": "aayush.singh@aiesec.net"
-		},
-		{
-			"name": "Adithya Murali",
-			"email_id": "adithya.murali@aiesec.net"
-		},
-		{
-			"name": "Aditi Gourishankar",
-			"email_id": "aditigourishankar.aiesec@gmail.com"
-		},
-		{
-			"name": "Aditi Hariharan",
-			"email_id": "aditi.hariharan@aiesec.net"
-		},
-		{
-			"name": "Akanksha Nehra",
-			"email_id": "akanksha.nehra@aiesec.net"
-		},
-		{
-			"name": "Akhil Ram",
-			"email_id": "pasumarthi.akhil@aiesec.net"
-		},
-		{
-			"name": "Akshem Malik",
-			"email_id": "akshem.malik@aiesec.net"
-		},
-		{
-			"name": "Anisha",
-			"email_id": "anisha.kumar@aiesec.net"
-		},
-		{
-			"name": "Anu Krishnan",
-			"email_id": "anu.tharakar@aiesec.net"
-		},
-		{
-			"name": "Anyattam Arora",
-			"email_id": ""
-		},
-		{
-			"name": "Aparna Balu",
-			"email_id": "aparnabalu.aiesec@gmail.com"
-		},
-		{
-			"name": "Arya Suresh",
-			"email_id": "aryasuresh577.aiesec@gmail.com"
-		},
-		{
-			"name": "Ashwin Goyal",
-			"email_id": "ashwingoyal.aiesec@gmail.com"
-		},
-		{
-			"name": "Ashwin Namboodiri",
-			"email_id": "ashwinnamboodiri.aiesec@gmail.com"
-		},
-		{
-			"name": "Badrinath Rajasekaran",
-			"email_id": "badrinathrajasekaran.aiesec@gmail.com"
-		},
-		{
-			"name": "Bhartendu Bhaskar",
-			"email_id": "bhartendu.bhaskar@aiesec.net "
-		},
-		{
-			"name": "Debalik Sarkar",
-			"email_id": "debalik.sarkar@aiesec.net"
-		},
-		{
-			"name": "Deepak Harish",
-			"email_id": "deepak.harish@aiesec.net"
-		},
-		{
-			"name": "Eashan Singh Gill",
-			"email_id": "eashangill.aiesec@gmail.com"
-		},
-		{
-			"name": "Gaurav Sinha",
-			"email_id": "gauravsinha.aiesec@gmail.com"
-		},
-		{
-			"name": "George Thomas K ",
-			"email_id": "georgekollamkulam.aiesec@gmail.com"
-		},
-		{
-			"name": "Godwyn James",
-			"email_id": "godwynwilliam.aiesec@gmail.com"
-		},
-		{
-			"name": "Haritima Bahuguna",
-			"email_id": "haritima.bahuguna@aiesec.net"
-		},
-		{
-			"name": "Himanshu Singhal",
-			"email_id": "himanshu.singhal@aiesec.net"
-		},
-		{
-			"name": "Himanvesh Naidu",
-			"email_id": "himanvesh.maddina@aiesec.net"
-		},
-		{
-			"name": "Hussain Khan",
-			"email_id": "hussain.khan.aiesec@gmail.com"
-		},
-		{
-			"name": "Jaitej Baddam",
-			"email_id": "jaitej.baddam@aiesec.net"
-		},
-		{
-			"name": "Jayanthkrishna Athi",
-			"email_id": "jayanthkrishnaathi.aiesec@gmail.com"
-		},
-		{
-			"name": "Kabir Khullar",
-			"email_id": "kabirkhullar.aiesec@gmail.com"
-		},
-		{
-			"name": "Kartik Arora",
-			"email_id": "kartikarora.aiesec@gmail.com"
-		},
-		{
-			"name": "Kshitij Srivastava",
-			"email_id": "kshitij.srivastava@aiesec.net"
-		},
-		{
-			"name": "Kshrey Jain",
-			"email_id": "kshrey.jain@aiesec.net"
-		},
-		{
-			"name": "Kushagra Sahai",
-			"email_id": "kushvk.aiesec@gmail.com"
-		},
-		{
-			"name": "Lekshika Chatrath",
-			"email_id": "lekshika.chatrath@aiesec.net"
-		},
-		{
-			"name": "Maria Smiti",
-			"email_id": "maria.smiti@aiesec.net"
-		},
-		{
-			"name": "Meeraj Bhardwaj",
-			"email_id": "meeraj.bhardwaj@aiesec.net"
-		},
-		{
-			"name": "Mrinal Kanyal",
-			"email_id": "mrinalkanyal.aiesec@gmail.com"
-		},
-		{
-			"name": "Naman Surana",
-			"email_id": "naman.surana@aiesec.net"
-		},
-		{
-			"name": "Naveen Antony",
-			"email_id": "naveen.antony@aiesec.net"
-		},
-		{
-			"name": "Neelesh Dave",
-			"email_id": "neelesh.dave@aiesec.net"
-		},
-		{
-			"name": "Nidha Ali",
-			"email_id": "nidhaali.aiesec@gmail.com"
-		},
-		{
-			"name": "Nikita Khandelwal",
-			"email_id": "nikitakhandelwal.aiesec@gmail.com"
-		},
-		{
-			"name": "Nirali Bandaru",
-			"email_id": "nirali.bandaru@aiesec.net"
-		},
-		{
-			"name": "Nishikanth Kollu",
-			"email_id": "nishikanth.kollu@aiesec.net"
-		},
-		{
-			"name": "Nitin Kaushik",
-			"email_id": "nitinkaushik.aiesec@gmail.com"
-		},
-		{
-			"name": "Parth Bathla",
-			"email_id": "parthbathla.aiesec@gmail.com"
-		},
-		{
-			"name": "Parth Gupta",
-			"email_id": "parth.gupta2@aiesec.net"
-		},
-		{
-			"name": "Parv Rastogi",
-			"email_id": "parvrastogi.aiesec@gmail.com"
-		},
-		{
-			"name": "Poorva Sinha",
-			"email_id": "poorva.sinha@aiesec.net"
-		},
-		{
-			"name": "Prachi ",
-			"email_id": "prachisharma0402.aiesec@gmail.com"
-		},
-		{
-			"name": "Prakhar Lohiya",
-			"email_id": "prakharlohiya.aiesec@gmail.com"
-		},
-		{
-			"name": "Puneeth Naikar",
-			"email_id": "puneeth.naikar@aiesec.net"
-		},
-		{
-			"name": "Pranav Kalevar",
-			"email_id": "pranav.kalevar2@aiesec.net "
-		},
-		{
-			"name": "Rahul Drall ",
-			"email_id": "rahul.drall@aiesec.net"
-		},
-		{
-			"name": "Rashi Wadhwani",
-			"email_id": "rashi.wadhwani@aiesec.net"
-		},
-		{
-			"name": "Ravi Kiran",
-			"email_id": "ravikiru.aiesec@gmail.com"
-		},
-		{
-			"name": "Rishabh Jain",
-			"email_id": "rishabh.jain4@aiesec.net"
-		},
-		{
-			"name": "Riya Jha",
-			"email_id": "riya.jha@aiesec.net"
-		},
-		{
-			"name": "Rohan Rao",
-			"email_id": "rohan.rao@aiesec.net"
-		},
-		{
-			"name": "Rohan Rawal",
-			"email_id": "rohanrawal.aiesec@gmail.com"
-		},
-		{
-			"name": "Sagar H P",
-			"email_id": "sagarhp.aiesec@gmail.com"
-		},
-		{
-			"name": "Sanchit Garg",
-			"email_id": "sanchit.garg@aiesec.net"
-		},
-		{
-			"name": "Sharon Shibu",
-			"email_id": "sharon.shibu@aiesec.net"
-		},
-		{
-			"name": "Shashank Asulkar",
-			"email_id": "shashank.asulkar@aiesec.net"
-		},
-		{
-			"name": "Shivam Singla",
-			"email_id": "shivamsingla.aiesec@gmail.com"
-		},
-		{
-			"name": "Shivam Yogi",
-			"email_id": "shivam.yogi@aiesec.net"
-		},
-		{
-			"name": "Shlok Tekriwal",
-			"email_id": "shlok.tekriwal@aiesec.net"
-		},
-		{
-			"name": "Shruti Singhai",
-			"email_id": "shrutisinghai.aiesec@gmail.com"
-		},
-		{
-			"name": "Sidarth Kumaran",
-			"email_id": "sidarthkumaran.aiesec@gmail.com"
-		},
-		{
-			"name": "Sonal Singh",
-			"email_id": "sonalsingh.aiesec@gmail.com"
-		},
-		{
-			"name": "Souptik Chaki",
-			"email_id": "souptikchaki.aiesec@gmail.com"
-		},
-		{
-			"name": "Stuti ",
-			"email_id": "stutisharma.aiesec@gmail.com"
-		},
-		{
-			"name": "Suraj Chungath",
-			"email_id": "surajchungath.aiesec@gmail.com"
-		},
-		{
-			"name": "Swadha Jha",
-			"email_id": "swadha.jha@aiesec.net"
-		},
-		{
-			"name": "Swapneel ",
-			"email_id": "swapneel.aiesec@gmail.com"
-		},
-		{
-			"name": "Tanvi Sapra",
-			"email_id": "tanvisapra.aiesec@gmail.com"
-		},
-		{
-			"name": "Vedant Lakhani",
-			"email_id": "vedantlakhani.aiesec@gmail.com"
-		},
-		{
-			"name": "Vikram Kaushik",
-			"email_id": "vikram.kaushik@aiesec.net"
-		},
-		{
-			"name": "Yashasvi Kocherlakota",
-			"email_id": "yashasvikocherlakota.aiesec@gmail.com"
-		},
-		{
-			"name": "Yukesh Hari",
-			"email_id": "yukesh.aiesec@gmail.com"
-		}
-	]
-}
+[
+	{
+		"body": "eb",
+		"name": "Nishant Nijaguna",
+		"email_id": "nishant.nijaguna8@aiesec.net"
+	},
+	{
+		"body": "eb",
+		"name": "Akash Nagarkar",
+		"email_id": "akashnagarkar@aiesec.net"
+	},
+	{
+		"body": "eb",
+		"name": "Avinash Dudani",
+		"email_id": "avinash2.dudani@aiesec.net"
+	},
+	{
+		"body": "eb",
+		"name": "Kaarthik Saravanan",
+		"email_id": "kaarthik.saravanan@aiesec.net"
+	},
+	{
+		"body": "eb",
+		"name": "Kendra Gandhi",
+		"email_id": "kendra.gandhi@aiesec.net"
+	},
+	{
+		"body": "eb",
+		"name": "Nihal Bashaher",
+		"email_id": "nihal.bashaher@aiesec.net"
+	},
+	{
+		"body": "eb",
+		"name": "Prithvi Kumar",
+		"email_id": "prithvi.kumar@aiesec.net"
+	},
+	{
+		"body": "eb",
+		"name": "Rishabh Oswal",
+		"email_id": "rishabh.oswal@aiesec.net"
+	},
+	{
+		"body": "eb",
+		"name": "Robin Bahl",
+		"email_id": "robin.bahl@aiesec.net"
+	},
+	{
+		"body": "mb",
+		"name": "Akash Jayan",
+		"email_id": "akash.jayan@aiesec.net "
+	},
+	{
+		"body": "mb",
+		"name": "Akshit Mathur",
+		"email_id": "akshit.mathur@aiesec.net"
+	},
+	{
+		"body": "mb",
+		"name": "Aniket Lunker",
+		"email_id": "Aniket.lunker@aiesec.net"
+	},
+	{
+		"body": "mb",
+		"name": "Anshuman Praharaj",
+		"email_id": "anshuman.praharaj@aiesec.net"
+	},
+	{
+		"body": "mb",
+		"name": "Archit Madaan",
+		"email_id": "Archit.madaan@aiesec.net"
+	},
+	{
+		"body": "mb",
+		"name": "Barkha Agarwal",
+		"email_id": "barkhaagarwal.aiesec@gmail.com"
+	},
+	{
+		"body": "mb",
+		"name": "Dinesh Choragudi",
+		"email_id": "dineshkumar.choragudi@aiesec.net"
+	},
+	{
+		"body": "mb",
+		"name": "Fidah Sultana",
+		"email_id": "fidah.sultana@aiesec.net "
+	},
+	{
+		"body": "mb",
+		"name": "Gautham Krishnan",
+		"email_id": "gautham.krishnan@aiesec.net"
+	},
+	{
+		"body": "mb",
+		"name": "Harsh Madaan",
+		"email_id": "harsh.madaan@aiesec.net"
+	},
+	{
+		"body": "mb",
+		"name": "Kanhiaya Sachdev",
+		"email_id": "kanhiaya.sachdev@aiesec.net"
+	},
+	{
+		"body": "mb",
+		"name": "Keerthi Shrikar Tatapudi",
+		"email_id": "shrikar.tatapudi@aiesec.net"
+	},
+	{
+		"body": "mb",
+		"name": "Lav Mahtani",
+		"email_id": "lav.mahtani@aiesec.net "
+	},
+	{
+		"body": "mb",
+		"name": "Madhumitha Ramachandran",
+		"email_id": "madhumitha.ramachandran@aiesec.net"
+	},
+	{
+		"body": "mb",
+		"name": "Nandhini Natarajan",
+		"email_id": "nandhini.natarajan@aiesec.net"
+	},
+	{
+		"body": "mb",
+		"name": "Niyor Sisodia",
+		"email_id": "niyor.sisodia@aiesec.net"
+	},
+	{
+		"body": "mb",
+		"name": "Parth Chaturvedi",
+		"email_id": "parth.chaturvedi@aiesec.net"
+	},
+	{
+		"body": "mb",
+		"name": "Pranav Gaur",
+		"email_id": "pranav.gaur@aiesec.net"
+	},
+	{
+		"body": "mb",
+		"name": "Raghav Bhan",
+		"email_id": "raghav.bhan@aiesec.net"
+	},
+	{
+		"body": "mb",
+		"name": "Rashi Agarwala",
+		"email_id": "rashi.agarwala@aiesec.net "
+	},
+	{
+		"body": "mb",
+		"name": "Ruturaj Bhagat",
+		"email_id": "ruturaj.bhagat@aiesec.net"
+	},
+	{
+		"body": "mb",
+		"name": "Sarthak Thapliyal",
+		"email_id": "sarthak.thapliyal@aiesec.net "
+	},
+	{
+		"body": "mb",
+		"name": "Tanya Jain",
+		"email_id": "tanya2.jain@aiesec.net"
+	},
+	{
+		"body": "mb",
+		"name": "Vaishnavi Bachala",
+		"email_id": "Vaishnavi.bachala@aiesec.net"
+	},
+	{
+		"body": "mb",
+		"name": "Vandan Mamlani",
+		"email_id": "vandan.mamlani@aiesec.net"
+	},
+	{
+		"body": "mb",
+		"name": "Yashasvi Chebiyyam",
+		"email_id": "yashasvi.chebiyyam@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Aayush Singh",
+		"email_id": "aayush.singh@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Adithya Murali",
+		"email_id": "adithya.murali@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Aditi Gourishankar",
+		"email_id": "aditigourishankar.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Aditi Hariharan",
+		"email_id": "aditi.hariharan@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Akanksha Nehra",
+		"email_id": "akanksha.nehra@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Akhil Ram",
+		"email_id": "pasumarthi.akhil@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Akshem Malik",
+		"email_id": "akshem.malik@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Anisha",
+		"email_id": "anisha.kumar@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Anu Krishnan",
+		"email_id": "anu.tharakar@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Anyattam Arora",
+		"email_id": ""
+	},
+	{
+		"body": "gb",
+		"name": "Aparna Balu",
+		"email_id": "aparnabalu.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Arya Suresh",
+		"email_id": "aryasuresh577.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Ashwin Goyal",
+		"email_id": "ashwingoyal.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Ashwin Namboodiri",
+		"email_id": "ashwinnamboodiri.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Badrinath Rajasekaran",
+		"email_id": "badrinathrajasekaran.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Bhartendu Bhaskar",
+		"email_id": "bhartendu.bhaskar@aiesec.net "
+	},
+	{
+		"body": "gb",
+		"name": "Debalik Sarkar",
+		"email_id": "debalik.sarkar@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Deepak Harish",
+		"email_id": "deepak.harish@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Eashan Singh Gill",
+		"email_id": "eashangill.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Gaurav Sinha",
+		"email_id": "gauravsinha.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "George Thomas K ",
+		"email_id": "georgekollamkulam.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Godwyn James",
+		"email_id": "godwynwilliam.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Haritima Bahuguna",
+		"email_id": "haritima.bahuguna@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Himanshu Singhal",
+		"email_id": "himanshu.singhal@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Himanvesh Naidu",
+		"email_id": "himanvesh.maddina@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Hussain Khan",
+		"email_id": "hussain.khan.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Jaitej Baddam",
+		"email_id": "jaitej.baddam@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Jayanthkrishna Athi",
+		"email_id": "jayanthkrishnaathi.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Kabir Khullar",
+		"email_id": "kabirkhullar.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Kartik Arora",
+		"email_id": "kartikarora.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Kshitij Srivastava",
+		"email_id": "kshitij.srivastava@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Kshrey Jain",
+		"email_id": "kshrey.jain@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Kushagra Sahai",
+		"email_id": "kushvk.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Lekshika Chatrath",
+		"email_id": "lekshika.chatrath@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Maria Smiti",
+		"email_id": "maria.smiti@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Meeraj Bhardwaj",
+		"email_id": "meeraj.bhardwaj@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Mrinal Kanyal",
+		"email_id": "mrinalkanyal.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Naman Surana",
+		"email_id": "naman.surana@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Naveen Antony",
+		"email_id": "naveen.antony@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Neelesh Dave",
+		"email_id": "neelesh.dave@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Nidha Ali",
+		"email_id": "nidhaali.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Nikita Khandelwal",
+		"email_id": "nikitakhandelwal.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Nirali Bandaru",
+		"email_id": "nirali.bandaru@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Nishikanth Kollu",
+		"email_id": "nishikanth.kollu@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Nitin Kaushik",
+		"email_id": "nitinkaushik.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Parth Bathla",
+		"email_id": "parthbathla.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Parth Gupta",
+		"email_id": "parth.gupta2@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Parv Rastogi",
+		"email_id": "parvrastogi.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Poorva Sinha",
+		"email_id": "poorva.sinha@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Prachi ",
+		"email_id": "prachisharma0402.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Prakhar Lohiya",
+		"email_id": "prakharlohiya.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Puneeth Naikar",
+		"email_id": "puneeth.naikar@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Pranav Kalevar",
+		"email_id": "pranav.kalevar2@aiesec.net "
+	},
+	{
+		"body": "gb",
+		"name": "Rahul Drall ",
+		"email_id": "rahul.drall@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Rashi Wadhwani",
+		"email_id": "rashi.wadhwani@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Ravi Kiran",
+		"email_id": "ravikiru.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Rishabh Jain",
+		"email_id": "rishabh.jain4@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Riya Jha",
+		"email_id": "riya.jha@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Rohan Rao",
+		"email_id": "rohan.rao@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Rohan Rawal",
+		"email_id": "rohanrawal.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Sagar H P",
+		"email_id": "sagarhp.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Sanchit Garg",
+		"email_id": "sanchit.garg@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Sharon Shibu",
+		"email_id": "sharon.shibu@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Shashank Asulkar",
+		"email_id": "shashank.asulkar@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Shivam Singla",
+		"email_id": "shivamsingla.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Shivam Yogi",
+		"email_id": "shivam.yogi@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Shlok Tekriwal",
+		"email_id": "shlok.tekriwal@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Shruti Singhai",
+		"email_id": "shrutisinghai.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Sidarth Kumaran",
+		"email_id": "sidarthkumaran.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Sonal Singh",
+		"email_id": "sonalsingh.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Souptik Chaki",
+		"email_id": "souptikchaki.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Stuti ",
+		"email_id": "stutisharma.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Suraj Chungath",
+		"email_id": "surajchungath.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Swadha Jha",
+		"email_id": "swadha.jha@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Swapneel ",
+		"email_id": "swapneel.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Tanvi Sapra",
+		"email_id": "tanvisapra.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Vedant Lakhani",
+		"email_id": "vedantlakhani.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Vikram Kaushik",
+		"email_id": "vikram.kaushik@aiesec.net"
+	},
+	{
+		"body": "gb",
+		"name": "Yashasvi Kocherlakota",
+		"email_id": "yashasvikocherlakota.aiesec@gmail.com"
+	},
+	{
+		"body": "gb",
+		"name": "Yukesh Hari",
+		"email_id": "yukesh.aiesec@gmail.com"
+	}
+]
