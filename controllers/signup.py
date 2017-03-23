@@ -39,7 +39,14 @@ class SignupHandler(RequestHandler):
 								secret, algorithm = 'HS256')
 			db.token.insert({"token" : token, "name" : name, "email" : email})
 
-			self.write({"token" : token, "code" : 200, "status" : "successfull", "user_data" : data})
+			self.write({"token" : token, "code" : 200, "status" : "successfull",
+						"name" : name,
+						"contact" : ctNo,
+						"raisedBy" : raisedby,
+						"country_pref" : [cpf1, cpf2, cpf3],
+						"status" : "raised",
+						"files" : []
+						})
 
 		else:
 			self.write({"code" : 401, "status" : "not_given_access"})
