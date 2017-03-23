@@ -8,14 +8,15 @@ class AddUserHandler(RequestHandler):
         auth_token = self.get_argument("auth_token")
         admin_email = self.get_argument("admin_email")
         email = self.get_argument("email")
-        tk = db.token.find_one({"token" : auth_token})
+        tk = yield db.token.find_one({"token" : auth_token})
 
         if tk:
-            chk_data = db.bodies.find({"eb" : admin_email})
+            chk_data = yield db.bodies.find_one({"eb" : admin_email})
 
             if chk_data:
 
-                if db.users.find({"email" : email}):
+                isUser = yield db.users.find_one({"email" : email})
+                if isUser:
                     self.write({"code" : 405, "status" : "already _a_member"})
 
                 else:

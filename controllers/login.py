@@ -20,7 +20,7 @@ class LoginHandler(RequestHandler):
 				time = now.strftime("%d-%m-%Y %I:%M %p")
 
 				token = jwt.encode({"email" : email, "time" : time}, secret, algorithm = 'HS256')
-				db.token.insert({"token" : token, "name" : data["name"], "email" : email})
+				yield db.token.insert({"token" : token, "name" : data["name"], "email" : email})
 
 				del(data["_id"])
 				del(data["pswd"])

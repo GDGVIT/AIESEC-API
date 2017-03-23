@@ -17,8 +17,9 @@ class SignupHandler(RequestHandler):
 		cpf2 = self.get_argument("cpf2")
 		cpf3 = self.get_argument("cpf3")
 
-		if db.users.find_one({"email" : email}):
+		isUser = yield db.users.find_one({"email" : email})
 
+		if isUser:
 			password, salt = hashingPassword(pswd)
 
 			ret = yield db.users.update({"email" : email},{"$set" : {
@@ -37,9 +38,10 @@ class SignupHandler(RequestHandler):
 
 			token = jwt.encode({"email" : email, "time" : time},
 								secret, algorithm = 'HS256')
-			db.token.insert({"token" : token, "name" : name, "email" : email})
+			yield db.token.insert({"token" : token, "name" : name, "email" : email})
 
 			self.write({"token" : token, "code" : 200, "status" : "successfull",
+						"email" : email,
 						"name" : name,
 						"contact" : ctNo,
 						"raisedBy" : raisedby,
