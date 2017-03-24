@@ -20,5 +20,9 @@ routes = [
     (
         r"/admin/addUser",
         admin.AddUserHandler
+    ),
+    (
+        r"/admin/removeUser",
+        admin.RemoveUserHandler
     )
 ]

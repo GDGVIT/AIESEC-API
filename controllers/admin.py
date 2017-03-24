@@ -7,7 +7,7 @@ class AddUserHandler(RequestHandler):
 
         auth_token = self.get_argument("auth_token")
         admin_email = self.get_argument("admin_email")
-        email = self.get_argument("uemail")
+        uemail = self.get_argument("uemail")
         tk = yield db.token.find_one({"token" : auth_token})
 
         if tk:
@@ -36,7 +36,7 @@ class RemoveUserHandler(RequestHandler):
 
         auth_token = self.get_argument("auth_token")
         admin_email = self.get_argument("admin_email")
-        email = self.get_argument("uemail")
+        uemail = self.get_argument("uemail")
 
         tk = yield db.token.find_one({"token" : auth_token})
 
