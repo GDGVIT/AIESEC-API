@@ -13,6 +13,6 @@ from motor import MotorClient
 from passlib.hash import pbkdf2_sha256
 from datetime import datetime
 
-secret = "bb9f8f5742f313ab5e6b3d93f96f36ab59955d86b71b4a7c"
+secret = os.environ['SECRET']
 
 db = MotorClient().aiesec
