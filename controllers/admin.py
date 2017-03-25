@@ -27,7 +27,7 @@ class AddUserHandler(RequestHandler):
                 self.write({"code" : 300, "status" : "Not_a_admin"})
 
         else:
-            self.wirte({"code" : 300, "status" : "Invalid_token"})
+            self.write({"code" : 300, "status" : "Invalid_token"})
 
 class RemoveUserHandler(RequestHandler):
 
@@ -56,4 +56,28 @@ class RemoveUserHandler(RequestHandler):
                 self.write({"code" : 300, "status" : "Not_a_admin"})
 
         else:
-            self.wirte({"code" : 300, "status" : "Invalid_token"})
+            self.write({"code" : 300, "status" : "Invalid_token"})
+
+class PostMessageHandler(RequestHandler):
+
+    @coroutine
+    def post(self):
+
+        auth_token = self.get_argument("auth_token")
+        email = self.get_argument("email")
+        msg = self.get_argument("message")
+
+        tk = yield db.token.find_one({"token" : auth_token})
+
+        if tk:
+            chk_data = yield db.bodies.find_one({"body" : "eb", "email": admin_email})
+
+            if chk_data and (admin_email == tk["email"]):
+
+                yield db.messages.insert({"email" : email, "msg" : msg})
+
+            else:
+                self.write({"code" : 300, "status" : "Not_a_admin"})
+
+        else:
+            self.write({"code" : 300, "status" : "Invalid_token"})
