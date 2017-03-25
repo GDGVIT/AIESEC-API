@@ -24,5 +24,13 @@ routes = [
     (
         r"ep/admin/removeUser",
         admin.RemoveUserHandler
+    ),
+    (
+        r"ep/admin/postmessage",
+        admin.PostMessageHandler
+    ),
+    (
+        r"ep/messages",
+        viewMessages.ViewMessagesHandler
     )
 ]
