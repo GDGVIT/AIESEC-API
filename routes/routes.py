@@ -2,15 +2,15 @@ from controllers import *
 
 routes = [
     (
-        r"/login",
+        r"ep/login",
         login.LoginHandler
     ),
     (
-        r"/signup",
+        r"ep/signup",
         signup.SignupHandler
     ),
     (
-        r"/uploads",
+        r"ep/uploads",
         uploads.UploadsHandler
     ),
     (
@@ -18,11 +18,11 @@ routes = [
         logout.LogoutHandler
     ),
     (
-        r"/admin/addUser",
+        r"ep/admin/addUser",
         admin.AddUserHandler
     ),
     (
-        r"/admin/removeUser",
+        r"ep/admin/removeUser",
         admin.RemoveUserHandler
     )
 ]
