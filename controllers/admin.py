@@ -5,15 +5,15 @@ class AddUserHandler(RequestHandler):
     @coroutine
     def post(self):
 
-        auth_token = self.get_argument("auth_token")
-        admin_email = self.get_argument("admin_email")
+        token = self.get_argument("token")
+        aemail = self.get_argument("aemail")
         uemail = self.get_argument("uemail")
-        tk = yield db.token.find_one({"token" : auth_token})
+        tk = yield db.token.find_one({"token" : token})
 
         if tk:
-            chk_data = yield db.bodies.find_one({"body" : "eb", "email": admin_email})
+            chk_data = yield db.bodies.find_one({"body" : "eb", "email": aemail})
 
-            if chk_data and (admin_email == tk["email"]):
+            if chk_data and (aemail == tk["email"]):
 
                 isUser = yield db.users.find_one({"email" : uemail})
                 if isUser:
@@ -34,16 +34,16 @@ class RemoveUserHandler(RequestHandler):
     @coroutine
     def post(self):
 
-        auth_token = self.get_argument("auth_token")
-        admin_email = self.get_argument("admin_email")
+        token = self.get_argument("token")
+        aemail = self.get_argument("aemail")
         uemail = self.get_argument("uemail")
 
-        tk = yield db.token.find_one({"token" : auth_token})
+        tk = yield db.token.find_one({"token" : token})
 
         if tk:
-            chk_data = yield db.bodies.find_one({"body" : "eb", "email": admin_email})
+            chk_data = yield db.bodies.find_one({"body" : "eb", "email": aemail})
 
-            if chk_data and (admin_email == tk["email"]):
+            if chk_data and (aemail == tk["email"]):
 
                 isUser = yield db.users.remove({"email" : uemail})
                 if isUser:
@@ -63,16 +63,16 @@ class PostMessageHandler(RequestHandler):
     @coroutine
     def post(self):
 
-        auth_token = self.get_argument("auth_token")
+        token = self.get_argument("token")
         email = self.get_argument("email")
         msg = self.get_argument("message")
 
-        tk = yield db.token.find_one({"token" : auth_token})
+        tk = yield db.token.find_one({"token" : token})
 
         if tk:
-            chk_data = yield db.bodies.find_one({"body" : "eb", "email": admin_email})
+            chk_data = yield db.bodies.find_one({"body" : "eb", "email": aemail})
 
-            if chk_data and (admin_email == tk["email"]):
+            if chk_data and (aemail == tk["email"]):
 
                 yield db.messages.insert({"email" : email, "msg" : msg})
 

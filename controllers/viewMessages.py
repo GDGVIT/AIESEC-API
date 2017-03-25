@@ -5,9 +5,9 @@ class ViewMessagesHandler(RequestHandler):
     @coroutine
     def post(self):
 
-        auth_token = self.get_argument("auth_token")
+        token = self.get_argument("token")
         req = int(self.get_argument("req"))
-        tk = yield db.token.find_one({"token" : auth_token})
+        tk = yield db.token.find_one({"token" : token})
 
         if tk:
             msgs = db.messages.find({}).skip(req*50).limit(50)

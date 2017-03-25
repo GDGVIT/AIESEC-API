@@ -5,12 +5,12 @@ __UPLOADS__ = "uploads/"
 class UploadsHandler(RequestHandler):
 
 	@coroutine
-	def post(self, auth_token, files):
+	def post(self):
 
-		auth_token = self.get_argument("auth_token")
+		token = self.get_argument("token")
 		files = self.get_argument("files")
 
-		tk = yield db.token.find_one({"token" : auth_token})
+		tk = yield db.token.find_one({"token" : token})
 
 		if tk:
 			for fl in files:
