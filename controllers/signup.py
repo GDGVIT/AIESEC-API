@@ -1,7 +1,6 @@
 from modules import *
 from utilities import *
 
-secret = "bb9f8f5742f313ab5e6b3d93f96f36ab59955d86b71b4a7c"
 
 class SignupHandler(RequestHandler):
 
