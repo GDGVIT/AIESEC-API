@@ -8,7 +8,7 @@ class UploadsHandler(RequestHandler):
 	def post(self):
 
 		token = self.get_argument("token")
-		files = self.get_argument("files")
+		files = self.request.files
 
 		tk = yield db.token.find_one({"token" : token})
 
