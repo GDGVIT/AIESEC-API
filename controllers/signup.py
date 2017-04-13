@@ -38,7 +38,7 @@ class SignupHandler(RequestHandler):
 			token = jwt.encode({"email" : email, "time" : time},
 								secret, algorithm = 'HS256')
 			yield db.token.insert({"token" : token, "name" : name, "email" : email})
-			yield db.bodies.insert({"body" : "gb", "name" : name, "email" : email})
+			yield db.bodies.update({"email" : email}, {"$set" : {"name" : name}})
 
 			self.write({"token" : token, "code" : 200, "status" : "successfull",
 						"email" : email,
