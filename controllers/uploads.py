@@ -23,7 +23,7 @@ class UploadsHandler(RequestHandler):
 			db.users.update({"email" : tk["email"]},
 				{"$push" : {"files" :fl_list}})
 
-			self.write({"code" : 202, "status" : "successfully_uploaded"})
+			self.write({"code" : 202, "status" : "successfully_uploaded", "files" : fl_list})
 
 		else:
 			self.write({"code" : 102, "status" : "invalid_token"})
