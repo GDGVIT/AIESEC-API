@@ -21,10 +21,15 @@ class LoginHandler(RequestHandler):
 				token = jwt.encode({"email" : email, "time" : time}, secret, algorithm = 'HS256')
 				yield db.token.insert({"token" : token, "name" : data["name"], "email" : email})
 
+				adm = False
+				isAdmin = yield db.bodies.find_one({"body" : "eb", "email": email})
+				if bool(isAdmin):
+					adm = True
+
 				del(data["_id"])
 				del(data["pswd"])
 				del(data["salt"])
-				self.write({"token" : token, "code" : 200, "status" : "successfull", "user_data" : data})
+				self.write({"token" : token, "code" : 200, "status" : "successfull", "user_data" : data, "is_admin" : adm})
 
 			else:
 				self.write({"code" : 400, "status" : "invalid_password"})
