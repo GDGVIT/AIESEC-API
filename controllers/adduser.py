@@ -5,7 +5,7 @@ class AddUserHandler(RequestHandler):
 	"""
 	class resposible to handle the add user functions
 
-	route : /adduser
+	route : /addUser
 	parameter : token, amail (admin_email), uemail (user_email), body (working body)
 	"""
 
@@ -16,7 +16,7 @@ class AddUserHandler(RequestHandler):
         aemail = self.get_argument("aemail")
         uemail = self.get_argument("uemail")
         body = self.get_argument("body")
-        
+
         tk = yield db.token.find_one({"token" : token})
 
         if tk:

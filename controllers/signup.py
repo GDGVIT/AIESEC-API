@@ -4,6 +4,13 @@ from utilities import *
 
 class SignupHandler(RequestHandler):
 
+	"""
+	class resposible to handle the signup functions
+
+	route : /signup
+	parameter : email, pswd, name, ctNo, raisedby, cpf1, cpf2, cpf3
+	"""
+
 	@coroutine
 	def post(self):
 
@@ -44,7 +51,7 @@ class SignupHandler(RequestHandler):
 
 			self.write({"token" : token,
 						"code" : 200,
-						"status" : "successfull",
+						"msg" : "successful",
 						"udata" : {	"email" : email,
 									"name" : name,
 									"contact" : ctNo,
@@ -56,4 +63,4 @@ class SignupHandler(RequestHandler):
 						})
 
 		else:
-			self.write({"code" : 401, "status" : "not_given_access"})
+			self.write({"code" : 401, "msg" : "not_given_access"})

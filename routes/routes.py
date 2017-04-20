@@ -1,3 +1,7 @@
+"""
+module to storing all the routes
+"""
+
 from controllers import *
 
 routes = [
