@@ -26,7 +26,7 @@ class LoginHandler(RequestHandler):
 
 				if pbkdf2_sha256.verify(data["salt"] + pswd, data["pswd"]):
 
-					token = setToken(email, name)
+					token = setToken(email, data["name"])
 
 					adm = False
 
@@ -37,7 +37,7 @@ class LoginHandler(RequestHandler):
 					del(data["pswd"])
 					del(data["salt"])
 					self.write({"token" : token, "code" : 200,
-							"status" : "successful", "udata" : data,
+							"msg" : "successful", "udata" : data,
 							"isAdmin" : adm, "member" : "aiesec"})
 
 				else:
@@ -55,13 +55,13 @@ class LoginHandler(RequestHandler):
 
 				if pbkdf2_sha256.verify(data["salt"] + pswd, data["pswd"]):
 
-					token = setToken(email, name)
+					token = setToken(email, data["name"])
 
 					del(data["_id"])
 					del(data["pswd"])
 					del(data["salt"])
 					self.write({"token" : token, "code" : 200,
-							"status" : "successful", "udata" : data,
+							"msg" : "successful", "udata" : data,
 							"member" : "ep"})
 
 				else:

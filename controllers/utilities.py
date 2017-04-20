@@ -28,8 +28,7 @@ def setToken(email, name):
 
     token = jwt.encode({"email" : email, "time" : time},
                         secret, algorithm = 'HS256')
-    yield db.token.insert({"token" : token, "name" : name,
+    db.token.insert({"token" : token, "name" : name,
                     "email" : email})
 
-    yield token
-    return
+    return token
