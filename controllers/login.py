@@ -3,7 +3,12 @@ from utilities import *
 
 
 class LoginHandler(RequestHandler):
+	"""
+	class resposible to handle the login functions
 
+	route : /login
+	parameter : email, pswd
+	"""
 	@coroutine
 	def post(self):
 
@@ -18,18 +23,25 @@ class LoginHandler(RequestHandler):
 				now = datetime.now()
 				time = now.strftime("%d-%m-%Y %I:%M %p")
 
-				token = jwt.encode({"email" : email, "time" : time}, secret, algorithm = 'HS256')
-				yield db.token.insert({"token" : token, "name" : data["name"], "email" : email})
+				token = jwt.encode({"email" : email, "time" : time}, secret,
+								algorithm = 'HS256')
+
+				yield db.token.insert({"token" : token,
+				 					"name" : data["name"],
+									"email" : email})
 
 				adm = False
 				isAdmin = yield db.bodies.find_one({"body" : "eb", "email": email})
+
 				if bool(isAdmin):
 					adm = True
 
 				del(data["_id"])
 				del(data["pswd"])
 				del(data["salt"])
-				self.write({"token" : token, "code" : 200, "status" : "successfull", "user_data" : data, "is_admin" : adm})
+				self.write({"token" : token, "code" : 200,
+						"status" : "successful", "udata" : data,
+						"isAdmin" : adm})
 
 			else:
 				self.write({"code" : 400, "status" : "invalid_password"})
