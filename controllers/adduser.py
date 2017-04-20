@@ -20,7 +20,7 @@ class AddUserHandler(RequestHandler):
         tk = yield db.token.find_one({"token" : token})
 
         if tk:
-            chk_data = yield db.bodies.find_one({"body" : "eb", "email": aemail})
+            chk_data = yield db.users.find_one({"body" : "eb", "email": aemail})
 
             if chk_data and (aemail == tk["email"]):
 

@@ -25,35 +25,35 @@ class SignupHandler(RequestHandler):
 
 		password, salt = hashingPassword(pswd)
 
-        res = yield db.ep.find({"email" : email})
+    		res = yield db.ep.find({"email" : email})
 
-        if res:
-            self.write({"code" : 402, "msg" : "already_a_member"})
-        else:
-    		ret = yield db.ep.insert({"email" : email,
-    								"name" : name,
-    								"pswd" : password,
-    								"contact" : ctNo,
-    								"raisedBy" : raisedby,
-    								"country_pref" : [cpf1, cpf2, cpf3],
-    								"status" : "raised",
-    								"files" : [],
-    								"salt" : salt,
-                                    "body" : "ep"
-    								})
+	    	if res:
+	        	self.write({"code" : 402, "msg" : "already_a_member"})
+	    	else:
+	    		ret = yield db.ep.insert({"email" : email,
+						"name" : name,
+						"pswd" : password,
+						"contact" : ctNo,
+						"raisedBy" : raisedby,
+						"country_pref" : [cpf1, cpf2, cpf3],
+						"status" : "raised",
+						"files" : [],
+						"salt" : salt,
+	                                	"body" : "ep"
+						})
 
     		token = setToken(email, name)
 
     		self.write({"token" : token,
-    					"code" : 200,
-    					"msg" : "successful",
-    					"udata" : {	"email" : email,
-    								"name" : name,
-    								"contact" : ctNo,
-    								"raisedBy" : raisedby,
-    								"country_pref" : [cpf1, cpf2, cpf3],
-    								"status" : "raised",
-    								"files" : [],
-                                    "body" : "ep"
-    							  }
-    					})
+    			"code" : 200,
+    			"msg" : "successful",
+    			"udata" : {"email" : email,
+    				"name" : name,
+    				"contact" : ctNo,
+    				"raisedBy" : raisedby,
+    				"country_pref" : [cpf1, cpf2, cpf3],
+    				"status" : "raised",
+    				"files" : [],
+                                "body" : "ep"
+    				  }
+    			})

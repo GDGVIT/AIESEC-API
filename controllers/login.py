@@ -19,7 +19,7 @@ class LoginHandler(RequestHandler):
 		mem = self.get_argument("member")
 
 		# for AIESECer's
-		if mem = "aiesec"
+		if mem == "aiesec":
 			data = yield db.users.find_one({"email" : email})
 
 			if data:

@@ -31,4 +31,5 @@ def setToken(email, name):
     yield db.token.insert({"token" : token, "name" : name,
                     "email" : email})
 
-    return token
+    yield token
+    return
