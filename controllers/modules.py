@@ -1,3 +1,7 @@
+"""
+module to import all necessary modules
+"""
+
 from tornado.ioloop import IOLoop
 from tornado.escape import json_encode
 from tornado.web import RequestHandler, Application

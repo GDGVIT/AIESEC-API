@@ -18,18 +18,18 @@ class AddUserHandler(RequestHandler):
 
                 isUser = yield db.users.find_one({"email" : uemail})
                 if isUser:
-                    self.write({"code" : 405, "status" : "already _a_member"})
+                    self.write({"code" : 405, "msg" : "already _a_member"})
 
                 else:
                     yield db.users.insert({"email" : uemail})
                     yield db.bodies.insert({"body" : body, "name" : "", "email" : uemail})
-                    self.write({"code" : 200, "status" : "successfull"})
+                    self.write({"code" : 200, "msg" : "successfull"})
 
             else:
-                self.write({"code" : 300, "status" : "Not_a_admin"})
+                self.write({"code" : 300, "msg" : "Not_a_admin"})
 
         else:
-            self.write({"code" : 300, "status" : "Invalid_token"})
+            self.write({"code" : 300, "msg" : "Invalid_token"})
 
 class RemoveUserHandler(RequestHandler):
 
@@ -49,13 +49,13 @@ class RemoveUserHandler(RequestHandler):
 
                 isUser = yield db.users.remove({"email" : uemail})
                 if isUser:
-                    self.write({"code" : 200, "status" : "successfull"})
+                    self.write({"code" : 200, "msg" : "successfull"})
 
                 else:
-                    self.write({"code" : 400, "status" : "not_a_member"})
+                    self.write({"code" : 400, "msg" : "not_a_member"})
 
             else:
-                self.write({"code" : 300, "status" : "Not_a_admin"})
+                self.write({"code" : 300, "msg" : "Not_a_admin"})
 
         else:
-            self.write({"code" : 300, "status" : "Invalid_token"})
+            self.write({"code" : 300, "msg" : "Invalid_token"})

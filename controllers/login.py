@@ -3,12 +3,14 @@ from utilities import *
 
 
 class LoginHandler(RequestHandler):
+
 	"""
 	class resposible to handle the login functions
 
 	route : /login
 	parameter : email, pswd
 	"""
+	
 	@coroutine
 	def post(self):
 
@@ -44,8 +46,8 @@ class LoginHandler(RequestHandler):
 						"isAdmin" : adm})
 
 			else:
-				self.write({"code" : 400, "status" : "invalid_password"})
+				self.write({"code" : 400, "msg" : "invalid_password"})
 
 		else:
 
-			self.write({"code" : 400, "status" : "invalid_email"})
+			self.write({"code" : 400, "msg" : "invalid_email"})

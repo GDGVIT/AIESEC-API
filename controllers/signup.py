@@ -21,33 +21,38 @@ class SignupHandler(RequestHandler):
 		if isUser:
 			password, salt = hashingPassword(pswd)
 
-			ret = yield db.users.update({"email" : email},{"$set" : {
-				"name" : name,
-				"pswd" : password,
-				"contact" : ctNo,
-				"raisedBy" : raisedby,
-				"country_pref" : [cpf1, cpf2, cpf3],
-				"status" : "raised",
-				"files" : [],
-				"salt" : salt
-				}})
+			ret = yield db.users.update({"email" : email},
+								{"$set" : {
+									"name" : name,
+									"pswd" : password,
+									"contact" : ctNo,
+									"raisedBy" : raisedby,
+									"country_pref" : [cpf1, cpf2, cpf3],
+									"status" : "raised",
+									"files" : [],
+									"salt" : salt
+									}})
 
 			now = datetime.now()
 			time = now.strftime("%d-%m-%Y %I:%M %p")
 
 			token = jwt.encode({"email" : email, "time" : time},
 								secret, algorithm = 'HS256')
-			yield db.token.insert({"token" : token, "name" : name, "email" : email})
+			yield db.token.insert({"token" : token, "name" : name,
+							"email" : email})
 			yield db.bodies.update({"email" : email}, {"$set" : {"name" : name}})
 
-			self.write({"token" : token, "code" : 200, "status" : "successfull",
-						"email" : email,
-						"name" : name,
-						"contact" : ctNo,
-						"raisedBy" : raisedby,
-						"country_pref" : [cpf1, cpf2, cpf3],
-						"status" : "raised",
-						"files" : []
+			self.write({"token" : token,
+						"code" : 200,
+						"status" : "successfull",
+						"udata" : {	"email" : email,
+									"name" : name,
+									"contact" : ctNo,
+									"raisedBy" : raisedby,
+									"country_pref" : [cpf1, cpf2, cpf3],
+									"status" : "raised",
+									"files" : []
+								  }
 						})
 
 		else:

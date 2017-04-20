@@ -4,11 +4,18 @@ __UPLOADS__ = "uploads/"
 
 class UploadsHandler(RequestHandler):
 
+	"""
+	class resposible to handle the uploads functions
+
+	route : /uploads
+	parameter : token, files (multipart)
+	"""
+
 	@coroutine
 	def post(self):
 
 		token = self.get_argument("token")
-		files = self.request.files["file"]
+		files = self.request.files["files"]
 
 		tk = yield db.token.find_one({"token" : token})
 		fl_list = []
@@ -26,8 +33,8 @@ class UploadsHandler(RequestHandler):
 			db.users.update({"email" : tk["email"]},
 				{"$pushAll" : {"files" :fl_list}})
 
-			self.write({"code" : 202, "status" : "successfully_uploaded",
+			self.write({"code" : 200, "msg" : "successfully_uploaded",
 			 		"files" : fl_list})
 
 		else:
-			self.write({"code" : 102, "status" : "invalid_token"})
+			self.write({"code" : 100, "msg" : "invalid_token", "files" : []})
