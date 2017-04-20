@@ -16,38 +16,57 @@ class LoginHandler(RequestHandler):
 
 		email = self.get_argument("email")
 		pswd = self.get_argument("pswd")
+		mem = self.get_argument("member")
 
-		data = yield db.users.find_one({"email" : email})
+		# for AIESECer's
+		if mem = "aiesec"
+			data = yield db.users.find_one({"email" : email})
 
-		if data:
+			if data:
 
-			if pbkdf2_sha256.verify(data["salt"] + pswd, data["pswd"]):
-				now = datetime.now()
-				time = now.strftime("%d-%m-%Y %I:%M %p")
+				if pbkdf2_sha256.verify(data["salt"] + pswd, data["pswd"]):
 
-				token = jwt.encode({"email" : email, "time" : time}, secret,
-								algorithm = 'HS256')
+					token = setToken(email, name)
 
-				yield db.token.insert({"token" : token,
-				 					"name" : data["name"],
-									"email" : email})
+					adm = False
 
-				adm = False
-				isAdmin = yield db.bodies.find_one({"body" : "eb", "email": email})
+					if data["body"] == "eb":
+						adm = True
 
-				if bool(isAdmin):
-					adm = True
+					del(data["_id"])
+					del(data["pswd"])
+					del(data["salt"])
+					self.write({"token" : token, "code" : 200,
+							"status" : "successful", "udata" : data,
+							"isAdmin" : adm, "member" : "aiesec"})
 
-				del(data["_id"])
-				del(data["pswd"])
-				del(data["salt"])
-				self.write({"token" : token, "code" : 200,
-						"status" : "successful", "udata" : data,
-						"isAdmin" : adm})
+				else:
+					self.write({"code" : 400, "msg" : "invalid_credentials"})
 
 			else:
-				self.write({"code" : 400, "msg" : "invalid_password"})
 
+				self.write({"code" : 400, "msg" : "invalid_credentials"})
+
+		# for EP
 		else:
+			data = yield db.ep.find_one({"email" : email})
 
-			self.write({"code" : 400, "msg" : "invalid_email"})
+			if data:
+
+				if pbkdf2_sha256.verify(data["salt"] + pswd, data["pswd"]):
+
+					token = setToken(email, name)
+
+					del(data["_id"])
+					del(data["pswd"])
+					del(data["salt"])
+					self.write({"token" : token, "code" : 200,
+							"status" : "successful", "udata" : data,
+							"member" : "ep"})
+
+				else:
+					self.write({"code" : 400, "msg" : "invalid_credentials"})
+
+			else:
+
+				self.write({"code" : 400, "msg" : "invalid_credentials"})
