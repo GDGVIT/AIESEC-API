@@ -10,8 +10,12 @@ routes = [
         login.LoginHandler
     ),
     (
-        r"/signup",
-        signup.SignupHandler
+        r"/aiesec/signup",
+        aiesec_signup.SignupHandler
+    ),
+    (
+        r"/ep/signup",
+        ep_signup.SignupHandler
     ),
     (
         r"/uploads",
