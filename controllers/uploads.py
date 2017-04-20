@@ -12,6 +12,7 @@ class UploadsHandler(RequestHandler):
 
 		tk = yield db.token.find_one({"token" : token})
 		fl_list = []
+
 		if tk:
 			for fl in files:
 				extn = os.path.splitext(fl['filename'])[1]
@@ -19,11 +20,14 @@ class UploadsHandler(RequestHandler):
 				fh = open(__UPLOADS__ + cname, 'w')
 				fh.write(fl['body'])
 				fh.close()
-				fl_list.append(__UPLOADS__ + cname)
+				fl_list.append({"new_name" : __UPLOADS__ + cname,
+						"old_name" : fl['filename']
+						})
 			db.users.update({"email" : tk["email"]},
-				{"$push" : {"files" :fl_list}})
+				{"$pushAll" : {"files" :fl_list}})
 
-			self.write({"code" : 202, "status" : "successfully_uploaded", "files" : fl_list})
+			self.write({"code" : 202, "status" : "successfully_uploaded",
+			 		"files" : fl_list})
 
 		else:
 			self.write({"code" : 102, "status" : "invalid_token"})
