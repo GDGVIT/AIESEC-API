@@ -2,14 +2,13 @@ from modules import *
 
 class RemoveUserHandler(RequestHandler):
 
-	"""
-	class resposible to handle the remove user functions
+    """
+    class resposible to handle the remove user functions
 
-	route : /removeUser
-	parameter : token, amail (admin_email), uemail (user_email)
-	"""
+    route : /removeUser
+    parameter : token, amail (admin_email), uemail (user_email)
+    """
 
-    @coroutine
     def post(self):
 
         token = self.get_argument("token")
@@ -25,7 +24,7 @@ class RemoveUserHandler(RequestHandler):
 
                 yield db.users.remove({"email" : uemail})
                 yield db.bodies.remove({"email" : uemail})
-                
+
                 self.write({"code" : 200, "msg" : "successful"})
 
             else:

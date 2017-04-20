@@ -2,12 +2,12 @@ from modules import *
 
 class AddUserHandler(RequestHandler):
 
-	"""
-	class resposible to handle the add user functions
+    """
+    class resposible to handle the add user functions
 
-	route : /addUser
-	parameter : token, amail (admin_email), uemail (user_email), body (working body)
-	"""
+    route : /addUser
+    parameter : token, amail (admin_email), uemail (user_email), body (working body)
+    """
 
     @coroutine
     def post(self):
