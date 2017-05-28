@@ -19,4 +19,10 @@ from datetime import datetime
 
 secret = os.environ['SECRET']
 
+"""
+collections :
+        users   [for AIESECer's]
+        ep      [for External Participant]
+"""
+
 db = MotorClient().aiesec
