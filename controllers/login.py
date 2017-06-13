@@ -62,7 +62,7 @@ class LoginHandler(RequestHandler):
 					del(data["salt"])
 					self.write({"token" : token, "code" : 200,
 							"msg" : "successful", "udata" : data,
-							"member" : "ep"})
+							"isAdmin" : None, "member" : "ep"})
 
 				else:
 					self.write({"code" : 400, "msg" : "invalid_credentials"})
