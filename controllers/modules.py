@@ -23,6 +23,7 @@ secret = os.environ['SECRET']
 collections :
         users   [for AIESECer's]
         ep      [for External Participant]
+        token   [for storing all tokens]
 """
 
 db = MotorClient().aiesec

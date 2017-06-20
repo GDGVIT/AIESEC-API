@@ -31,8 +31,7 @@ class AddUserHandler(RequestHandler):
 
                 else:
                     yield db.users.insert({"email" : uemail})
-                    yield db.bodies.insert({"body" : body, "name" : "",
-                                    "email" : uemail})
+                    
                     self.write({"code" : 200, "msg" : "successful"})
 
             else:
