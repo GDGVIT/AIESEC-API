@@ -15,26 +15,25 @@ class UploadsHandler(RequestHandler):
 	def post(self):
 
 		token = self.get_argument("token")
-		files = self.request.files["files"]
+		fle = self.request.files["file"][0]
+		fnm = self.get_argument("fname")
 
 		tk = yield db.token.find_one({"token" : token})
-		fl_list = []
 
 		if tk:
-			for fl in files:
-				extn = os.path.splitext(fl['filename'])[1]
-				cname = str(uuid.uuid4()) + extn
-				fh = open(__UPLOADS__ + cname, 'w')
-				fh.write(fl['body'])
-				fh.close()
-				fl_list.append({"new_name" : __UPLOADS__ + cname,
-						"old_name" : fl['filename']
-						})
-			db.users.update({"email" : tk["email"]},
-				{"$pushAll" : {"files" :fl_list}})
+			extn = os.path.splitext(fl['filename'])[1]
+			cname = str(uuid.uuid4()) + extn
+			fh = open(__UPLOADS__ + cname, 'w')
+			fh.write(fl['body'])
+			fh.close()
+			temp = {"new_name" : __UPLOADS__ + cname,
+					"orig_name" : fnm
+					}
+			_ = yield db.ep.update({"email" : tk["email"]},
+				{"$push" : {"files" : temp}})
 
 			self.write({"code" : 200, "msg" : "successfully_uploaded",
-			 		"files" : fl_list})
+			 		"files" : temp})
 
 		else:
 			self.write({"code" : 100, "msg" : "invalid_token", "files" : []})
