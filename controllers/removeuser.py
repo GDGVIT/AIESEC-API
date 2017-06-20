@@ -25,7 +25,10 @@ class RemoveUserHandler(RequestHandler):
 
                 _ = yield db.users.remove({"email" : uemail})
 
-                self.write({"code" : 200, "msg" : "successful"})
+                if _:
+                    self.write({"code" : 200, "msg" : "successful"})
+                else:
+                    self.write({"code" : 403, "msg" : "successful"})
 
             else:
                 self.write({"code" : 101, "msg" : "Not_a_admin"})
