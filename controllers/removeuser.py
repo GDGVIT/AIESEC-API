@@ -9,6 +9,7 @@ class RemoveUserHandler(RequestHandler):
     parameter : token, amail (admin_email), uemail (user_email)
     """
 
+    @coroutine
     def post(self):
 
         token = self.get_argument("token")
@@ -18,12 +19,11 @@ class RemoveUserHandler(RequestHandler):
         tk = yield db.token.find_one({"token" : token})
 
         if tk:
-            chk_data = yield db.bodies.find_one({"body" : "eb", "email": aemail})
+            chk_data = yield db.users.find_one({"body" : "eb", "email": aemail})
 
             if chk_data and (aemail == tk["email"]):
 
-                yield db.users.remove({"email" : uemail})
-                yield db.bodies.remove({"email" : uemail})
+                _ = yield db.users.remove({"email" : uemail})
 
                 self.write({"code" : 200, "msg" : "successful"})
 
